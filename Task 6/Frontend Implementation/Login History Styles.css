@@ -1,0 +1,127 @@
+ /* LoginHistory.scss */
+.login-history {
+  background: #f8fafc;
+  border-radius: 20px;
+  padding: 2rem;
+  margin: 2rem 0;
+
+  .history-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 2rem;
+    flex-wrap: wrap;
+    gap: 1rem;
+
+    h2 {
+      margin: 0;
+      color: #1e293b;
+    }
+
+    .stats {
+      display: flex;
+      gap: 1rem;
+
+      .stat {
+        padding: 0.5rem 1rem;
+        border-radius: 20px;
+        font-size: 0.9rem;
+        font-weight: 600;
+
+        &.failed {
+          background: #fef2f2;
+          color: #dc2626;
+        }
+
+        &.mobile {
+          background: #eff6ff;
+          color: #1e40af;
+        }
+      }
+    }
+  }
+
+  .history-list {
+    .login-item {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      padding: 1.5rem;
+      background: white;
+      border-radius: 16px;
+      margin-bottom: 1rem;
+      box-shadow: 0 2px 8px rgba(0,0,0,0.05);
+      transition: all 0.2s;
+
+      &.failed {
+        border-left: 4px solid #f87171;
+        background: #fef2f2;
+      }
+
+      &:hover {
+        transform: translateY(-2px);
+        box-shadow: 0 8px 25px rgba(0,0,0,0.1);
+      }
+
+      .login-info {
+        display: flex;
+        flex-direction: column;
+        gap: 0.25rem;
+        flex: 1;
+
+        .device-info, .browser-info, .location-info {
+          display: flex;
+          align-items: center;
+          gap: 0.5rem;
+          font-size: 0.95rem;
+
+          .mobile-tag {
+            background: #eff6ff;
+            color: #1e40af;
+            padding: 0.2rem 0.5rem;
+            border-radius: 10px;
+            font-size: 0.8rem;
+            font-weight: 500;
+          }
+        }
+      }
+
+      .login-meta {
+        text-align: right;
+        min-width: 150px;
+
+        .time {
+          font-size: 0.9rem;
+          color: #64748b;
+          margin-bottom: 0.25rem;
+        }
+
+        .otp-badge, .failed-badge {
+          padding: 0.25rem 0.75rem;
+          border-radius: 12px;
+          font-size: 0.8rem;
+          font-weight: 600;
+        }
+
+        .otp-badge {
+          background: #ecfdf5;
+          color: #059669;
+        }
+
+        .failed-badge {
+          background: #fef2f2;
+          color: #dc2626;
+        }
+      }
+
+      .ip-address {
+        font-family: monospace;
+        font-size: 0.85rem;
+        color: #94a3b8;
+        background: #f1f5f9;
+        padding: 0.25rem 0.75rem;
+        border-radius: 6px;
+      }
+    }
+  }
+}
