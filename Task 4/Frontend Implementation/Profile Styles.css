@@ -1,0 +1,146 @@
+/* UserProfile.scss */
+.user-profile {
+  max-width: 800px;
+  margin: 0 auto;
+  padding: 2rem;
+}
+
+.user-profile .points-display {
+    display: flex;
+    align-items: center;
+    gap: 2rem;
+    margin-bottom: 2rem;
+    background: linear-gradient(135deg, #667eea, #764ba2);
+    padding: 2rem;
+    border-radius: 20px;
+    color: white;
+
+    text-align: center;
+  }
+  
+  .user-profile .points-display .points-total {
+    font-size: 4rem;
+    font-weight: 700;
+    display: block;
+    text-shadow: 0 4px 8px rgba(0,0,0,0.3);
+  }
+  
+  .user-profile .points-display .points-label {
+    font-size: 1.2rem;
+    opacity: 0.9;
+  }
+  
+  .user-profile .points-display .points-breakdown div {
+    font-size: 1.1rem;
+    margin-bottom: 0.5rem;
+  }
+  
+  .user-profile .transfer-lock {
+
+    background: #fef2f2;
+    color: #dc2626;
+    padding: 1rem;
+    border-radius: 12px;
+    text-align: center;
+    border-left: 4px solid #f87171;
+    margin-bottom: 1.5rem;
+  }
+  
+  .user-profile .transfer-toggle {
+    width: 100%;
+    padding: 1rem;
+    background: linear-gradient(135deg, #10b981, #059669);
+    color: white;
+    border: none;
+    border-radius: 12px;
+    font-size: 1.1rem;
+    font-weight: 600;
+    cursor: pointer;
+    transition: all 0.2s;
+  }
+
+  .user-profile .transfer-toggle:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 8px 25px rgba(16, 185, 129, 0.3);
+  }
+
+  .user-profile .transfer-form {
+    background: #f8fafc;
+    padding: 2rem;
+    border-radius: 16px;
+    margin: 1.5rem 0;
+  }
+  
+  .user-profile .transfer-form .form-group {
+    margin-bottom: 1.5rem;
+  }
+  
+  .user-profile .transfer-form .form-group input {
+    width: 100%;
+    padding: 1rem;
+    border: 2px solid #e2e8f0;
+    border-radius: 12px;
+    font-size: 1rem;
+  }
+  
+  .user-profile .transfer-form .form-group input:focus {
+    outline: none;
+    border-color: #667eea;
+  }
+  
+  .user-profile .transfer-form .transfer-btn {
+    width: 100%;
+    padding: 1.2rem;
+    background: linear-gradient(135deg, #f59e0b, #d97706);
+    color: white;
+    border: none;
+    border-radius: 12px;
+    font-size: 1.1rem;
+    font-weight: 600;
+    cursor: pointer;
+  }
+  
+  .user-profile .transactions {
+    margin-top: 3rem;
+  }
+
+  .user-profile .transactions h3 {
+    margin-bottom: 1.5rem;
+    color: #1e293b;
+  }
+
+  .user-profile .transaction-row {
+    display: flex;
+    align-items: center;
+    padding: 1.2rem;
+    border-radius: 12px;
+    margin-bottom: 0.75rem;
+    transition: all 0.2s;
+  }
+
+  .user-profile .transaction-row.gain {
+    background: #ecfdf5;
+    border-left: 4px solid #10b981;
+  }
+
+  .user-profile .transaction-row.loss {
+    background: #fef2f2;
+    border-left: 4px solid #f87171;
+  }
+
+  .user-profile .transaction-row:hover {
+    transform: translateX(8px);
+  }
+
+  .user-profile .transaction-row .tx-icon {
+    font-size: 1.5rem;
+    margin-right: 1rem;
+  }
+
+  .user-profile .transaction-row .tx-details {
+    flex: 1;
+  }
+
+  .user-profile .transaction-row .tx-amount {
+    font-weight: 600;
+  }
