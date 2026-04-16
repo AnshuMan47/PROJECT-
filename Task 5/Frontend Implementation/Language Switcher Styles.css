@@ -1,0 +1,175 @@
+/* LanguageSwitcher.scss */
+.language-switcher {
+  position: relative;
+
+  .current-lang {
+    background: white;
+    border: 2px solid #e2e8f0;
+    padding: 0.8rem 1.5rem;
+    border-radius: 25px;
+    font-weight: 600;
+    cursor: pointer;
+    transition: all 0.2s;
+    box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+
+    &:hover {
+      border-color: #667eea;
+      transform: translateY(-1px);
+    }
+  }
+
+  .lang-dropdown {
+    position: absolute;
+    top: 100%;
+    right: 0;
+    background: white;
+    border-radius: 16px;
+    box-shadow: 0 20px 40px rgba(0,0,0,0.15);
+    margin-top: 0.5rem;
+    min-width: 200px;
+    z-index: 1000;
+    overflow: hidden;
+
+    .lang-list {
+      max-height: 300px;
+      overflow-y: auto;
+    }
+
+    .lang-option {
+      width: 100%;
+      padding: 1rem 1.5rem;
+      border: none;
+      background: none;
+      text-align: left;
+      cursor: pointer;
+      transition: all 0.2s;
+      font-size: 1rem;
+
+      &:hover {
+        background: #f8fafc;
+      }
+
+      &.active {
+        background: linear-gradient(135deg, #667eea, #764ba2);
+        color: white;
+      }
+    }
+  }
+
+  .otp-modal {
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: rgba(0,0,0,0.5);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    z-index: 2000;
+    backdrop-filter: blur(4px);
+
+    .otp-container {
+      background: white;
+      padding: 2.5rem;
+      border-radius: 20px;
+      max-width: 400px;
+      width: 90%;
+      box-shadow: 0 25px 50px rgba(0,0,0,0.25);
+      text-align: center;
+
+      h3 {
+        margin-bottom: 1rem;
+        background: linear-gradient(135deg, #667eea, #764ba2);
+        background-clip: text;
+        -webkit-background-clip: text;
+        -webkit-text-fill-color: transparent;
+      }
+
+      .method-hint {
+        background: #eff6ff;
+        color: #1e40af;
+        padding: 0.8rem;
+        border-radius: 10px;
+        margin: 1rem 0;
+        font-weight: 500;
+      }
+
+      .otp-input {
+        input {
+          width: 100%;
+          max-width: 200px;
+          padding: 1.2rem;
+          font-size: 1.5rem;
+          text-align: center;
+          border: 3px solid #e2e8f0;
+          border-radius: 12px;
+          letter-spacing: 0.5rem;
+          font-weight: 600;
+          margin-bottom: 1.5rem;
+
+          &:focus {
+            border-color: #667eea;
+            outline: none;
+            box-shadow: 0 0 0 3px rgba(102, 126, 234, 0.1);
+          }
+        }
+      }
+
+      .otp-actions {
+        display: flex;
+        gap: 1rem;
+        justify-content: center;
+
+        button {
+          padding: 1rem 2rem;
+          border: none;
+          border-radius: 12px;
+          font-weight: 600;
+          cursor: pointer;
+          transition: all 0.2s;
+
+          &:disabled {
+            opacity: 0.6;
+            cursor: not-allowed;
+          }
+        }
+
+        .cancel-btn {
+          background: #f8fafc;
+          color: #64748b;
+          border: 2px solid #e2e8f0;
+
+          &:hover {
+            background: #f1f5f9;
+          }
+        }
+
+        button:not(.cancel-btn) {
+          background: linear-gradient(135deg, #667eea, #764ba2);
+          color: white;
+
+          &:hover:not(:disabled) {
+            transform: translateY(-2px);
+            box-shadow: 0 8px 25px rgba(102, 126, 234, 0.3);
+          }
+        }
+      }
+    }
+  }
+
+    .message {
+      margin-top: 1rem;
+      padding: 1rem;
+      border-radius: 10px;
+      font-weight: 500;
+      opacity: 0;
+      transform: translateY(-10px);
+      transition: all 0.3s;
+  
+      &.show {
+        opacity: 1;
+        transform: translateY(0);
+      }
+    }
+  }
